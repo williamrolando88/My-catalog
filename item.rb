@@ -14,9 +14,10 @@ class Item
   end
 
   def can_be_archived?
-   current_year = Date.today.year
-   return true if (current_year - @publish_date.year) > 10
-   false
+    current_year = Date.today.year
+    return true if (current_year - @publish_date.year) > 10
+
+    false
   end
 
   def self.move_to_archive(item)
