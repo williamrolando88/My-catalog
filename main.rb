@@ -1,4 +1,4 @@
-require_relative './UI/app'
+require_relative './UI/app.rb'
 require_relative './UI/helpers'
 
 def main
@@ -29,11 +29,12 @@ def main
 
   @home_menu_handler = lambda do
     include Helpers
-    puts @choose_option_message
+    print @choose_option_message
     user_selection = gets.chomp.upcase
     case user_selection
     when '1'
       puts 'select 1'
+
       @books_menu.call
     when '2'
       puts 'select 2'
@@ -64,7 +65,7 @@ def main
 
   @books_menu_handler = lambda do
     include Helpers
-    puts @choose_option_message
+    print @choose_option_message
     user_selection = gets.chomp.upcase
     case user_selection
     when '1'
@@ -101,19 +102,19 @@ def main
 
   @music_menu_handler = lambda do
     include Helpers
-    puts @choose_option_message
+    print @choose_option_message
     user_selection = gets.chomp.upcase
     case user_selection
     when '1'
-      puts 'Listing all music albums... (the proper method needs to be called here)'
+      @app.albums.albums
       continue
       @music_menu.call
     when '2'
-      puts 'Listing all genres... (the proper method needs to be called here)'
+      @app.genres.genres
       continue
       @music_menu.call
     when '3'
-      puts 'Adding new music album... (the proper method needs to be called here)'
+      @app.add_album
       continue
       @music_menu.call
     when 'R'
