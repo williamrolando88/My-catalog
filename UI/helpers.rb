@@ -1,8 +1,6 @@
 require 'os'
 
 module Helpers
-
-
   def continue
     puts 'Press ENTER key to continue...'
     gets
