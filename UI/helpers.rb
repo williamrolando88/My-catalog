@@ -1,8 +1,12 @@
 require 'os'
 
 module Helpers
-  Wrong_option = "Error!\nPlease select a valid option"
-  Choose_option_message = "Enter an option number here: "
+
+
+  def continue
+    puts 'Press ENTER key to continue...'
+    gets
+  end
 
   def clear_screen
     system('cls') if OS.windows?
