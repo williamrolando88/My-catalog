@@ -3,7 +3,7 @@ class LabelItems
 
   def initialize(item, label)
     @item = item
-    item.label = self
+    item.label << self
     @label = label
     label.items << self
   end

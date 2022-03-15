@@ -1,7 +1,8 @@
 class Label
-  attr_reader :id, :genre, :author, :source, :label, :publish_date
-  
-  def initialize
+  attr_reader :id
+  attr_accessor :title, :color, :items
+
+  def initialize(title, color)
      @id = rand(1..1000)
      @title = title
      @color = color
@@ -9,6 +10,6 @@ class Label
   end
 
   def self.add_item(item)
-    LabelItems.new(item, self)
+    LabelItems.new(item, label)
   end
 end

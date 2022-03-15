@@ -4,12 +4,12 @@ class Item
   attr_reader :id, :genre, :author, :source, :label, :publish_date
   attr_accessor :archived
 
-  def initialize(genre, author, source, label, publish_date)
+  def initialize(genre, author, source, publish_date)
     @id = rand(1..1000)
     @genre = genre
     @author = author
     @source = source
-    @label = label
+    @label = []
     @publish_date = Date.parse(publish_date)
     @archived = false
   end
@@ -26,7 +26,7 @@ class Item
     item.archived
   end
 
-  def self.add_item(item)
-    LabelItems.new(item, self)
+  def self.add_label(item, label)
+    LabelItems.new(item, label)
   end
 end
