@@ -59,6 +59,10 @@ module AddAlbum
       on_spotify = gets.chomp.upcase
     end
 
-    on_spotify == 'Y'
+    if on_spotify == 'Y'
+      true
+    else
+      false
+    end
   end
 end

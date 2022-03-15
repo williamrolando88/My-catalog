@@ -12,7 +12,7 @@ class Albums
     @albums << album
   end
 
-  def albums
+  def show_albums
     puts 'Albums list: '
     puts 'EMPTY' if @albums.empty?
     puts(@albums.map do |album|

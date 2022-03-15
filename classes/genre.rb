@@ -11,6 +11,6 @@ class Genre
     return if @items.include?(item)
 
     @items << item
-    item.set_genre(self)
+    item.genre = self
   end
 end

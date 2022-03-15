@@ -106,7 +106,7 @@ def main
     user_selection = gets.chomp.upcase
     case user_selection
     when '1'
-      @app.albums.albums
+      @app.albums.show_albums
       continue
       @music_menu.call
     when '2'
