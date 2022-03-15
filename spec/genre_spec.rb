@@ -13,7 +13,7 @@ describe 'Create genre instance' do
       expect(example.name).to eq 'Rock'
     end
   end
-  
+
   context 'and append the following items' do
     it "album name: 'Pop'" do
       pop = Genre.new(name: 'Pop')
