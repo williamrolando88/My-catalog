@@ -9,11 +9,11 @@ describe 'Item class' do
     expect(@item.class).to be Item
   end
 
-  it 'can_be_archived? should return true' do
+  it 'can_be_archived? should return false' do
     expect(@item.can_be_archived?).to be false
   end
 
-  it 'move_to_archive(item) should return true' do
+  it 'move_to_archive(item) should return false' do
     expect(Item.move_to_archive(@item)).to be false
   end
 end

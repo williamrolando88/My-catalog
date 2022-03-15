@@ -1,16 +1,16 @@
 require_relative 'item'
 
 class Book < Item
-  attr_reader :publisher, :cover_state
+  attr_accessor :publisher, :cover_state
   
-  def initialize(publisher, cover_state)
-    super()
+  def initialize(*args, publisher, cover_state)
+    super(*args)
     @publisher = publisher
     @cover_state = cover_state
   end
 
-  def can_be_archived?
-    return true if self.can_be_archived? || cover_state == bad
+  def self.can_be_archived?(book)
+    return true if Item.move_to_archive(book) || book.cover_state == 'bad'
     false
   end
 end
