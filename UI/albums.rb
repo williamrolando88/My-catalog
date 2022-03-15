@@ -23,6 +23,6 @@ class Albums
   end
 
   def convert_to_json
-    albums_json = @albums.map {|album| album.to_hash}
+    @albums.map {|album| album.to_hash}
   end
 end

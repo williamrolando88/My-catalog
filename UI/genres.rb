@@ -48,6 +48,6 @@ class Genres
   end
   
   def convert_to_json
-    genres_json = @genres.map {|genre| genre.to_hash}
+    @genres.map {|genre| genre.to_hash}
   end
 end
