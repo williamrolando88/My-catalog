@@ -20,7 +20,7 @@ describe 'Item class' do
     expect(Item.move_to_archive(@item)).to be false
   end
 
-  it 'add_label should insert label to item & Label class' do
+  it 'add_label should insert label to Item & Label class' do
     Item.add_label(@item, @label)
     expect(@item.label.length).to eq 1
   end
