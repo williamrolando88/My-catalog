@@ -4,8 +4,8 @@ require 'json'
 class Book < Item
   attr_accessor :publisher, :cover_state
   
-  def initialize(*args, publisher, cover_state)
-    super(*args)
+  def initialize(publisher:, cover_state:, **args )
+    super(**args)
     @publisher = publisher
     @cover_state = cover_state
   end
@@ -23,7 +23,7 @@ class Book < Item
     file_arr = []
     if Book.check_file
       JSON.parse(File.read(Book.path)).each do |element|
-        file_arr << Book.new(element['genre'], element['author'], element['source'], element['publish_date'], element['id'], element['publisher'], element['cover_state'])
+        file_arr << Book.new(element['genre'], element['author'], element['source'], element['publish_date'], element['id'], element['publisher'], element['cover_state'], element['label'])
       end
     end
     file_arr

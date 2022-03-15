@@ -64,12 +64,12 @@ def main
 
   @books_menu_handler = lambda do
     include Helpers
+
     puts @choose_option_message
     user_selection = gets.chomp.upcase
     case user_selection
     when '1'
       puts 'Listing all books... (the proper method needs to be called here)'
-      @app.list_books
       continue
       @books_menu.call
     when '2'
@@ -78,8 +78,7 @@ def main
       @books_menu.call
     when '3'
       puts 'Adding new books... (the proper method needs to be called here)'
-      @app.book_menu
-      @app.add_book 
+      @app.add_book
       continue
       @books_menu.call
     when 'R'

@@ -3,8 +3,9 @@ require 'json'
 
 describe 'Book class' do
   before :each do
-    @book = Book.new('genre', 'author', 'source', '2022-03-04','Penguin', 'bad' )
-    @book2 = Book.new('genre', 'author', 'source', '2022-03-04','Penguin', 'good' )
+    @label = Label.new(title: 'gift', color:'red' )
+    @book = Book.new(genre:'genre', author:'author', source:'source', label:@label, publish_date:'2022-03-04',publisher:'Penguin', cover_state: 'bad' )
+    @book2 = Book.new(genre:'genre', author:'author', source:'source', label:@label, publish_date:'2022-03-04',publisher:'Penguin', cover_state: 'good' )
   end
 
   it 'object class should be Book' do

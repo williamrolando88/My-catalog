@@ -1,17 +1,18 @@
+require_relative './label'
 require 'date'
 
 class Item
   attr_reader :id, :genre, :author, :source, :publish_date
   attr_accessor :archived, :label
 
-  def initialize(genre, author, source, label, publish_date, id = nil)
-    @id = id || rand(1..1000)
+  def initialize( id: rand(1..1000), genre:, author:, source:, label:, publish_date: )
+    @id = id
     @genre = genre
     @author = author
     @source = source
     @label = label
     label.add_item(self)
-    @publish_date = Date.parse(publish_date)
+    @publish_date = Date.parse(publish_date.to_s)
     @archived = false
   end
 
