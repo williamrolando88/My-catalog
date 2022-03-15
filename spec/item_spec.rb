@@ -1,11 +1,10 @@
 require_relative '../classes/item'
 require_relative '../classes/label'
-require_relative '../classes/label_items'
 
 describe 'Item class' do
   before :each do
-    @item = Item.new('genre', 'author', 'source', '2022-03-04')
     @label = Label.new('gift', 'red')
+    @item = Item.new('genre', 'author', 'source', @label, '2022-03-04')
   end
 
   it 'object class should be Item' do
@@ -21,7 +20,6 @@ describe 'Item class' do
   end
 
   it 'add_label should insert label to Item & Label class' do
-    Item.add_label(@item, @label)
-    expect(@item.label.length).to eq 1
+    expect(@item.label.class).to be Label
   end
 end

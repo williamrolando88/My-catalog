@@ -78,6 +78,8 @@ def main
       @books_menu.call
     when '3'
       puts 'Adding new books... (the proper method needs to be called here)'
+      @app.book_menu
+      @app.add_book 
       continue
       @books_menu.call
     when 'R'
