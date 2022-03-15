@@ -5,7 +5,7 @@ describe 'Item class' do
     @item = Item.new('genre', 'author', 'source', 'label', '2022-03-04')
   end
 
-  it 'should create a new item object' do
+  it 'object class should be Item' do
     expect(@item.class).to be Item
   end
 
