@@ -1,11 +1,17 @@
 require_relative '../classes/genre'
 
 class Genres
+  attr_reader :genres
+
   def initialize
     @genres = []
   end
 
-  def add_genre
+  def add_genre(name:, id:)
+    @genres << Genre.new(name: name, id: id)
+  end
+
+  def add_genre_by_user
     print 'Type a the new genre name: '
     input = gets.chomp.capitalize
     while input.empty?
@@ -38,5 +44,9 @@ class Genres
     return false if element.empty?
 
     element.first
+  end
+
+  def convert_to_json
+    @genres.map(&:to_hash)
   end
 end

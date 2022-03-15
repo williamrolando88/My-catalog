@@ -9,6 +9,20 @@ class MusicAlbum < Item
     super(genre: genre, **options)
   end
 
+  def to_hash
+    {
+      'type' => self.class,
+      'id' => @id,
+      'author' => @author,
+      'source' => @source,
+      'label' => @label,
+      'genre' => @genre.id,
+      'publish_date' => @publish_date,
+      'on_spotify' => @on_spotify,
+      'archived' => @archived
+    }
+  end
+
   private
 
   def can_be_archived?

@@ -5,6 +5,7 @@ def main
   @wrong_option = "Error!\nPlease select a valid option"
   @choose_option_message = 'Enter an option number here: '
   @app = App.new
+  @app.restore_data
 
   @greeting = lambda do
     include Helpers
@@ -41,6 +42,8 @@ def main
       @music_menu.call
     when 'E'
       clear_screen
+      puts 'Changes saved successfully'
+      @app.save_data
       puts 'Have a nice day ;D'
       gets
       clear_screen
