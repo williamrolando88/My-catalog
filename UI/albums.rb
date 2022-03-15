@@ -13,11 +13,10 @@ class Albums
   end
 
   def albums
-    puts 'Albums: '
+    puts 'Albums list: '
     puts 'EMPTY' if @albums.empty?
     puts(@albums.map do |album|
-           "Genre: #{album.genre.name}, Author: #{album.author}, Is on Spotify?: #{album.on_spotify},
-           Publish date: #{album.publish_date}"
+           "Genre: #{album.genre.name}, Author: #{album.author}, Is on Spotify?: #{album.on_spotify}, Publish date: #{album.publish_date}"
          end)
   end
 end

@@ -19,7 +19,7 @@ class Genres
   end
 
   def genres_extended
-    puts 'Genre: '
+    puts 'Genres list: '
     puts 'EMPTY' if @genres.empty?
     puts(@genres.map { |genre| "Genre: #{genre.name}, Number of albums: #{genre.items.length}" })
   end

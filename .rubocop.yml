@@ -10,7 +10,7 @@ AllCops:
 Metrics/ParameterLists:
   Max: 6
 Layout/LineLength:
-  Max: 120
+  Enabled: false
 Metrics/MethodLength:
   Enabled: false
 Metrics/AbcSize:
