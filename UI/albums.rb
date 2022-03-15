@@ -1,11 +1,10 @@
 require_relative '../classes/music_album'
+require_relative '../classes/genre'
 
 class Albums
 
   def initialize
     @albums = []
-    @albums << MusicAlbum.new(on_spotify: true, genre: 'Pop')
-    @albums << MusicAlbum.new(on_spotify: true, genre: 'Jazz')
   end
 
   def add_album(author, genre, source, label, publish_date, on_spotify)
@@ -16,7 +15,7 @@ class Albums
   def albums
     puts "Albums: "
     puts 'EMPTY' if @albums.empty?
-    puts(@albums.map { |album| "Genre: #{album.genre}, Author: #{album.author}, Is on Spotify?: #{album.on_spotify}, Publish date: #{album.publish_date}"})
+    puts(@albums.map { |album| "Genre: #{album.genre.name}, Author: #{album.author}, Is on Spotify?: #{album.on_spotify}, Publish date: #{album.publish_date}"})
   end
   
 end

@@ -11,14 +11,25 @@ module Add_album
   end
 
   def request_genre
-    print 'Genre: '
-    genre = gets.chomp.upcase
-    while genre.empty?
-      print 'Please type a valid genre: '
-      genre = gets.chomp
+    puts 'Select a genre: '
+    @genres.genres_short
+    handle_request_genre
+  end
+
+  def handle_request_genre
+    input = gets.chomp.upcase
+    return @genres.add_genre if input == 'C'
+
+    id = input.to_i
+    genre = @genres.genres_by_id(id)
+    until genre
+      print 'Please type a valid ID: '
+      id = gets.chomp.to_i
+      genre = @genres.genres_by_id(id)
     end
     genre
   end
+  
 
   def request_source
     print 'Source [optional]: '

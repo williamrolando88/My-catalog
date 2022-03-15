@@ -110,7 +110,7 @@ def main
       continue
       @music_menu.call
     when '2'
-      @app.genres.genres
+      @app.genres.genres_extended
       continue
       @music_menu.call
     when '3'

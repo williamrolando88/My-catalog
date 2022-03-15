@@ -19,8 +19,5 @@ class App
     publish_date = request_publish_date
     on_spotify = request_on_spotify
     @albums.add_album(author, genre, source, label, publish_date, on_spotify)
-
   end
-
-  
 end

@@ -3,13 +3,10 @@ require_relative 'item'
 class MusicAlbum < Item
   attr_reader :on_spotify
 
-  def initialize(on_spotify:, **options)
+  def initialize(on_spotify:, genre:, **options)
     @on_spotify = on_spotify
-    super(**options)
-  end
-
-  def set_genre(genre)
-    @genre = genre
+    genre.items.push(self)
+    super(genre: genre, **options)
   end
 
   private
