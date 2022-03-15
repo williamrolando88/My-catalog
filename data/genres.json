@@ -1,1 +1,12 @@
-["{\"type\":\"Genre\",\"id\":754,\"name\":\"Asdasdac\"}"]
+[
+  {
+    "type": "Genre",
+    "id": 234,
+    "name": "Rock"
+  },
+  {
+    "type": "Genre",
+    "id": 712,
+    "name": "Pop"
+  }
+]

@@ -5,10 +5,11 @@ def main
   @wrong_option = "Error!\nPlease select a valid option"
   @choose_option_message = 'Enter an option number here: '
   @app = App.new
-
+  
   @greeting = lambda do
     include Helpers
     clear_screen
+    @app.restore_data
     message = "HI!\n"\
               'Welcome to My collection App'
     puts message

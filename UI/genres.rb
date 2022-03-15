@@ -7,7 +7,12 @@ class Genres
     @genres = []
   end
 
-  def add_genre
+  def add_genre(name:, id:)
+    @genres << Genre.new(name: name, id: id)
+  end
+  
+
+  def add_genre_by_user
     print 'Type a the new genre name: '
     input = gets.chomp.capitalize
     while input.empty?
@@ -43,6 +48,6 @@ class Genres
   end
   
   def convert_to_json
-    genres_json = @genres.map {|genre| genre.to_json}
+    genres_json = @genres.map {|genre| genre.to_hash}
   end
 end

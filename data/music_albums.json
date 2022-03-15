@@ -1,1 +1,35 @@
-["{\"type\":\"MusicAlbum\",\"id\":459,\"author\":\"asdac\",\"source\":\"\",\"label\":\"\",\"genre\":754,\"publish_date\":\"2001-01-01\",\"archived\":false}"]
+[
+  {
+    "type": "MusicAlbum",
+    "id": 666,
+    "author": "Queen",
+    "source": "",
+    "label": "",
+    "genre": 234,
+    "publish_date": "2001-01-01",
+    "on_spotify": true,
+    "archived": false
+  },
+  {
+    "type": "MusicAlbum",
+    "id": 650,
+    "author": "Nirvana",
+    "source": "",
+    "label": "",
+    "genre": 234,
+    "publish_date": "2001-02-03",
+    "on_spotify": true,
+    "archived": false
+  },
+  {
+    "type": "MusicAlbum",
+    "id": 209,
+    "author": "Shakira",
+    "source": "",
+    "label": "",
+    "genre": 712,
+    "publish_date": "2002-02-02",
+    "on_spotify": true,
+    "archived": false
+  }
+]

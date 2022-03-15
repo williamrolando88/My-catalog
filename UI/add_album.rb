@@ -17,7 +17,7 @@ module AddAlbum
 
   def handle_request_genre
     input = gets.chomp.upcase
-    return @genres.add_genre if input == 'C'
+    return @genres.add_genre_by_user if input == 'C'
 
     id = input.to_i
     genre = @genres.genres_by_id(id)
