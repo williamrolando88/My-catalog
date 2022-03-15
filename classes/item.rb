@@ -1,10 +1,11 @@
 require 'date'
 
 class Item
+  attr_reader :id, :genre, :author, :source, :label, :publish_date
   attr_accessor :archived
 
   def initialize(genre, author, source, label, publish_date)
-    @id = rand(8..100)
+    @id = rand(1..1000)
     @genre = genre
     @author = author
     @source = source
@@ -24,9 +25,8 @@ class Item
     item.archived = true if item.can_be_archived?
     item.archived
   end
-end
 
-item = Item.new('genre', 'author', 'source', 'label', '2022-03-04')
-p(item)
-p(item.can_be_archived?)
-p(Item.move_to_archive(item))
+  def self.add_item(item)
+    LabelItems.new(item, self)
+  end
+end
