@@ -1,5 +1,4 @@
-module Add_album
-
+module AddAlbum
   def request_author
     print 'Author: '
     author = gets.chomp
@@ -29,23 +28,20 @@ module Add_album
     end
     genre
   end
-  
 
   def request_source
     print 'Source [optional]: '
-    source = gets.chomp
-    source
+    gets.chomp
   end
 
   def request_label
     print 'Label [optional]: '
-    label = gets.chomp
-    label
+    gets.chomp
   end
 
   def request_publish_date
     print 'Publish date (dd/mm/yyyy): '
-    publish_date= gets.chomp
+    publish_date = gets.chomp
     day, month, year = publish_date.split('/')
     until Date.valid_date?(year.to_i, month.to_i, day.to_i)
       print 'Please type a valid publish date (dd/mm/yyyy): '
@@ -62,11 +58,7 @@ module Add_album
       print 'Please chose a valid option, is on Spotify? [Y/N]: '
       on_spotify = gets.chomp.upcase
     end
-    
-    if on_spotify == 'Y'
-      true
-    else
-      false
-    end
+
+    on_spotify == 'Y'
   end
 end

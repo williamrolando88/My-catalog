@@ -1,10 +1,10 @@
 require_relative 'paths'
 
-describe "Create music_album instance" do
-  context "giving the following valid inputs" do
+describe 'Create music_album instance' do
+  context 'giving the following valid inputs' do
     it "genre: 'Pop', on_spotify: false" do
       album = MusicAlbum.new(genre: 'Pop', on_spotify: false)
-      expect(album). to be_instance_of MusicAlbum
+      expect(album).to be_instance_of MusicAlbum
       expect(album.genre).to eq 'Pop'
       expect(album.on_spotify).to eq false
     end
@@ -17,7 +17,7 @@ describe "Create music_album instance" do
       album = MusicAlbum.new(genre: 'Jazz', on_spotify: true)
       expect(album.genre).to eq 'Jazz'
       expect(album.on_spotify).to eq true
-      expect(album.archived). to be false
+      expect(album.archived).to be false
     end
   end
 end

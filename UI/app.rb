@@ -3,8 +3,9 @@ require_relative 'genres'
 require_relative 'add_album'
 
 class App
-  include Add_album
+  include AddAlbum
   attr_reader :albums, :genres
+
   def initialize
     @books = []
     @albums = Albums.new

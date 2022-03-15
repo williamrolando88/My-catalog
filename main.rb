@@ -1,4 +1,4 @@
-require_relative './UI/app.rb'
+require_relative './UI/app'
 require_relative './UI/helpers'
 
 def main

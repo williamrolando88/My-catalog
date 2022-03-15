@@ -17,17 +17,16 @@ class Genres
     puts "Genre \"#{new_genre.name}\" successfully created"
     new_genre
   end
-  
 
   def genres_extended
-    puts "Genre: "
+    puts 'Genre: '
     puts 'EMPTY' if @genres.empty?
     puts(@genres.map { |genre| "Genre: #{genre.name}, Number of albums: #{genre.items.length}" })
   end
 
   def genres_short
     if @genres.empty?
-      print 'No available genres, (C)reate a new one: ' 
+      print 'No available genres, (C)reate a new one: '
     else
       puts(@genres.map { |genre| "ID:#{genre.id}, Genre: #{genre.name}" })
       print 'Type the ID of one of the available genres or (C)reate a new one: '
@@ -37,7 +36,7 @@ class Genres
   def genres_by_id(id)
     element = @genres.select { |genre| genre.id == id }
     return false if element.empty?
+
     element.first
   end
-  
 end
