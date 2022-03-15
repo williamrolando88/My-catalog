@@ -2,6 +2,8 @@ require_relative '../classes/music_album'
 require_relative '../classes/genre'
 
 class Albums
+  attr_reader :albums
+
   def initialize
     @albums = []
   end
@@ -18,5 +20,9 @@ class Albums
     puts(@albums.map do |album|
            "Genre: #{album.genre.name}, Author: #{album.author}, Is on Spotify?: #{album.on_spotify}, Publish date: #{album.publish_date}"
          end)
+  end
+
+  def convert_to_json
+    albums_json = @albums.map {|album| album.to_json}
   end
 end

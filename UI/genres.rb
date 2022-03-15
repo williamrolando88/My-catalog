@@ -1,6 +1,8 @@
 require_relative '../classes/genre'
 
 class Genres
+  attr_reader :genres
+
   def initialize
     @genres = []
   end
@@ -38,5 +40,9 @@ class Genres
     return false if element.empty?
 
     element.first
+  end
+  
+  def convert_to_json
+    genres_json = @genres.map {|genre| genre.to_json}
   end
 end
