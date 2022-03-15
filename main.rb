@@ -75,6 +75,7 @@ def main
       @books_menu.call
     when '2'
       puts 'Listing all labels... (the proper method needs to be called here)'
+      @app.list_labels
       continue
       @books_menu.call
     when '3'

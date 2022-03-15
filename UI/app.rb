@@ -36,4 +36,8 @@ class App
   def list_books
     @books.list_books
   end
+
+  def list_labels
+    @labels.list_labels
+  end
 end
