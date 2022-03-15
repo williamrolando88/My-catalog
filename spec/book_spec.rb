@@ -1,4 +1,5 @@
 require_relative '../classes/book'
+require 'json'
 
 describe 'Book class' do
   before :each do
@@ -16,5 +17,10 @@ describe 'Book class' do
 
   it 'can_be_archived? should return false' do
     expect(Book.can_be_archived?(@book2)).to be false
+  end
+
+  it 'should write data to book.json' do
+    data = [@book, @book2]
+    expect(Book.write_file(data)).to be > 0
   end
 end

@@ -1,0 +1,20 @@
+[
+  {
+    "genre": "genre",
+    "author": "Homeros",
+    "source": "source",
+    "date": "2022-03-04",
+    "id": 804,
+    "publisher": "Penguin",
+    "cover_state": "bad"
+  },
+  {
+    "genre": "genre",
+    "author": "James Joyce",
+    "source": "source",
+    "date": "1922-06-04",
+    "id": 909,
+    "publisher": "Penguin",
+    "cover_state": "good"
+  }
+]
