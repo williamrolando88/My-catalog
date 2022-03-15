@@ -10,7 +10,6 @@ class Genres
   def add_genre(name:, id:)
     @genres << Genre.new(name: name, id: id)
   end
-  
 
   def add_genre_by_user
     print 'Type a the new genre name: '
@@ -46,8 +45,8 @@ class Genres
 
     element.first
   end
-  
+
   def convert_to_json
-    @genres.map {|genre| genre.to_hash}
+    @genres.map(&:to_hash)
   end
 end

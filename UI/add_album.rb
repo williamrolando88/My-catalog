@@ -19,7 +19,7 @@ module AddAlbum
     input = gets.chomp.upcase
     id = input.to_i
     genre = @genres.genres_by_id(id)
-    
+
     until genre || input == 'C'
       print 'Please type the ID of one of the available genres or (C)reate a new one: '
       input = gets.chomp.upcase
@@ -28,6 +28,7 @@ module AddAlbum
     end
 
     return @genres.add_genre_by_user if input == 'C'
+
     genre
   end
 

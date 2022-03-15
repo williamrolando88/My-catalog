@@ -6,7 +6,7 @@ def main
   @choose_option_message = 'Enter an option number here: '
   @app = App.new
   @app.restore_data
-  
+
   @greeting = lambda do
     include Helpers
     clear_screen
