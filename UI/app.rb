@@ -21,6 +21,7 @@ class App
     publish_date = request_publish_date
     on_spotify = request_on_spotify
     @albums.add_album(author: author, genre:genre, source:source, label:label, publish_date:publish_date, on_spotify:on_spotify)
+    puts "#{author}, #{genre.name} album successfully created!"
   end
 
   def save_data

@@ -31,5 +31,27 @@
     "publish_date": "2002-02-02",
     "on_spotify": true,
     "archived": false
+  },
+  {
+    "type": "MusicAlbum",
+    "id": 504,
+    "author": "Julio Jaramillo",
+    "source": "",
+    "label": "",
+    "genre": 480,
+    "publish_date": "2003-03-03",
+    "on_spotify": true,
+    "archived": false
+  },
+  {
+    "type": "MusicAlbum",
+    "id": 427,
+    "author": "Britney Spears",
+    "source": "",
+    "label": "",
+    "genre": 712,
+    "publish_date": "2004-04-04",
+    "on_spotify": true,
+    "archived": false
   }
 ]
