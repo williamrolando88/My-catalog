@@ -70,6 +70,7 @@ def main
     case user_selection
     when '1'
       puts 'Listing all books... (the proper method needs to be called here)'
+      @app.list_books
       continue
       @books_menu.call
     when '2'

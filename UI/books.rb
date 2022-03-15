@@ -10,9 +10,12 @@ class Books
   end
 
   def list_books
+    @books.each do |book|
+      puts"Genre: #{book.genre} Author: #{book.author} Source: #{book.source}"
+    end
   end
 
   def add_book(genre, author, source, label, publish_date, publisher, cover_state)
-    @books = Book.new(genre:genre, author:author, source:source, label: label, publish_date:publish_date, publisher:publisher, cover_state: cover_state )
+    @books << Book.new(genre:genre, author:author, source:source, label: label, publish_date:publish_date, publisher:publisher, cover_state: cover_state )
   end
 end

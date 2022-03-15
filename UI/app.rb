@@ -32,4 +32,8 @@ class App
     cover_state = request_cover
     book = @books.add_book(genre,author,source, label, publish_date, publisher, cover_state)
   end
+
+  def list_books
+    @books.list_books
+  end
 end
