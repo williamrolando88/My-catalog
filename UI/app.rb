@@ -36,12 +36,13 @@ class App
   end
 
   def list_books
-    restore_book
+    restore_labels
+    restore_books
     @books.list_books
   end
 
   def list_labels
-    restore_labels if @labels.labels.length == 0
+    restore_labels if @labels.labels.length.zero?
     @labels.list_labels
   end
 

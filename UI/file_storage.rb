@@ -20,7 +20,7 @@ module FileStorage
     return if labels_json.empty?
     
     JSON.parse(labels_json).each do |label|
-      @labels.create_label_with_id(label['id'], label['title'], label['color'])
+      @labels.restore_label_with_id(label['id'], label['title'], label['color'])
     end
     
   end
@@ -31,13 +31,13 @@ module FileStorage
     JSON.parse(books_json).each do |book|
       label = @labels.find_label_by_id(book['label'])
 
-      #@books.add_book(book['genre'],
-      #                book['author'],
-      #                book['source'],
-      #                label,
-      #                book['publish_date'],
-      #                book['publisher'],
-      #                book['cover_state'])
+      @books.add_book(book['genre'],
+                      book['author'],
+                      book['source'],
+                      label[0],
+                      book['publish_date'],
+                      book['publisher'],
+                      book['cover_state'])
     end
   end
 end
