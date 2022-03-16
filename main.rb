@@ -73,14 +73,17 @@ def main
     case user_selection
     when '1'
       puts 'Listing all books... (the proper method needs to be called here)'
+      @app.list_books
       continue
       @books_menu.call
     when '2'
       puts 'Listing all labels... (the proper method needs to be called here)'
+      @app.list_labels
       continue
       @books_menu.call
     when '3'
       puts 'Adding new books... (the proper method needs to be called here)'
+      @app.add_book
       continue
       @books_menu.call
     when 'R'

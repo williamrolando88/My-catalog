@@ -23,6 +23,8 @@ Metrics/BlockLength:
   Max: 30
 Metrics/CyclomaticComplexity:
   Enabled: false
+Metrics/ParameterLists:
+  Max: 7
 
 Style/Documentation:
   Enabled: false
