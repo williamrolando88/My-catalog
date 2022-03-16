@@ -5,7 +5,7 @@ class MusicAlbum < Item
 
   def initialize(on_spotify:, genre:, **options)
     @on_spotify = on_spotify
-    genre.items.push(self)
+    genre.add_album(self)
     super(genre: genre, **options)
   end
 

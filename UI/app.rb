@@ -25,9 +25,9 @@ class App
   end
 
   def add_album
-    author = request_author
-    genre = request_genre
-    source = request_source
+    author = request_author_album
+    genre = request_genre_album
+    source = request_source_album
     label = request_label
     publish_date = request_publish_date
     on_spotify = request_on_spotify

@@ -1,5 +1,5 @@
 module AddAlbum
-  def request_author
+  def request_author_album
     print 'Author: '
     author = gets.chomp
     while author.empty?
@@ -9,7 +9,7 @@ module AddAlbum
     author
   end
 
-  def request_genre
+  def request_genre_album
     puts 'Select a genre: '
     @genres.genres_short
     handle_request_genre
@@ -32,7 +32,7 @@ module AddAlbum
     genre
   end
 
-  def request_source
+  def request_source_album
     print 'Source [optional]: '
     gets.chomp
   end
