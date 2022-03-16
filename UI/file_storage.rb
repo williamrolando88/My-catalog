@@ -16,13 +16,28 @@ module FileStorage
     File.write(BOOKS_FILE_PATH, JSON.pretty_generate(books_json))
   end
 
-  def parse_label(label_json)
-    return if label_json.empty?
+  def parse_label(labels_json)
+    return if labels_json.empty?
     
-    JSON.parse(label_json).each do |label|
-      @labels.create_label(label['title'], label['color'] )
+    JSON.parse(labels_json).each do |label|
+      @labels.create_label_with_id(label['id'], label['title'], label['color'])
+    end
+    
+  end
+
+  def parse_book(books_json)
+    return if books_json.empty?
+
+    JSON.parse(books_json).each do |book|
+      label = @labels.find_label_by_id(book['label'])
+
+      #@books.add_book(book['genre'],
+      #                book['author'],
+      #                book['source'],
+      #                label,
+      #                book['publish_date'],
+      #                book['publisher'],
+      #                book['cover_state'])
     end
   end
 end
-
-

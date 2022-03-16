@@ -71,12 +71,11 @@ def main
     case user_selection
     when '1'
       puts 'Listing all books... (the proper method needs to be called here)'
-      @app.list_books
+      @app.restore_books
       continue
       @books_menu.call
     when '2'
       puts 'Listing all labels... (the proper method needs to be called here)'
-      @app.restore_data
       @app.list_labels
       continue
       @books_menu.call
