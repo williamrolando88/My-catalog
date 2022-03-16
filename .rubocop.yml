@@ -7,8 +7,10 @@ AllCops:
 
   DisplayCopNames: true
 
+Metrics/ParameterLists:
+  Max: 7
 Layout/LineLength:
-  Max: 120
+  Enabled: false
 Metrics/MethodLength:
   Enabled: false
 Metrics/AbcSize:

@@ -5,6 +5,7 @@ def main
   @wrong_option = "Error!\nPlease select a valid option"
   @choose_option_message = 'Enter an option number here: '
   @app = App.new
+  @app.restore_data
 
   @greeting = lambda do
     include Helpers
@@ -29,17 +30,19 @@ def main
 
   @home_menu_handler = lambda do
     include Helpers
-    puts @choose_option_message
+    print @choose_option_message
     user_selection = gets.chomp.upcase
     case user_selection
     when '1'
       puts 'select 1'
+
       @books_menu.call
     when '2'
       puts 'select 2'
       @music_menu.call
     when 'E'
       clear_screen
+      puts 'Changes saved successfully'
       @app.save_data
       puts 'Have a nice day ;D'
       gets
@@ -65,8 +68,7 @@ def main
 
   @books_menu_handler = lambda do
     include Helpers
-
-    puts @choose_option_message
+    print @choose_option_message
     user_selection = gets.chomp.upcase
     case user_selection
     when '1'
@@ -106,19 +108,19 @@ def main
 
   @music_menu_handler = lambda do
     include Helpers
-    puts @choose_option_message
+    print @choose_option_message
     user_selection = gets.chomp.upcase
     case user_selection
     when '1'
-      puts 'Listing all music albums... (the proper method needs to be called here)'
+      @app.albums.show_albums
       continue
       @music_menu.call
     when '2'
-      puts 'Listing all genres... (the proper method needs to be called here)'
+      @app.genres.genres_extended
       continue
       @music_menu.call
     when '3'
-      puts 'Adding new music album... (the proper method needs to be called here)'
+      @app.add_album
       continue
       @music_menu.call
     when 'R'
