@@ -14,11 +14,7 @@ describe 'Book class' do
     expect(@book.class).to be Book
   end
 
-  it 'can_be_archived? should return true' do
-    expect(Book.can_be_archived?(@book)).to be true
-  end
-
   it 'can_be_archived? should return false' do
-    expect(Book.can_be_archived?(@book2)).to be false
+    expect(@book.archived).to be false
   end
 end

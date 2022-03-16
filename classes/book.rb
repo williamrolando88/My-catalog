@@ -2,12 +2,14 @@ require_relative 'item'
 require 'json'
 
 class Book < Item
-  attr_accessor :publisher, :cover_state
+  attr_accessor :publisher, :cover_state, :label
 
-  def initialize(publisher:, cover_state:, **args)
-    super(**args)
+  def initialize(publisher:, cover_state:, label:, **args)
+    super(label: label, **args)
     @publisher = publisher
     @cover_state = cover_state
+    @label = label
+    label.add_item(self)
   end
 
   def self.can_be_archived?(book)
@@ -19,7 +21,7 @@ class Book < Item
   def self.path
     'data/book.json'
   end
-
+  
   def to_hash
     {
       'type' => self.class,

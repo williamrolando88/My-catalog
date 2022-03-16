@@ -20,16 +20,5 @@
     "publish_date": "2005-01-01",
     "publisher": "Global",
     "cover_state": "Bad"
-  },
-  {
-    "type": "Book",
-    "id": 459,
-    "genre": "Genre",
-    "author": "Author",
-    "source": "Source",
-    "label": 460,
-    "publish_date": "2002-09-01",
-    "publisher": "Publish",
-    "cover_state": "Cover"
   }
 ]
