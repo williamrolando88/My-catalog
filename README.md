@@ -1,6 +1,24 @@
-# project name here
+# My Catalog
 
-> Project description here.
+This project is meant to be used to store your books and music albums information, with the additional feature that you can organize them by the label in the case of books and by genre in the case of music albums.
+
+Take a look at neat and simple UI:
+
+### Home menu
+
+![Home Menu](./screenshots/My_catalog-home-menu.png)
+
+### Books menu
+
+![Books Menu](./screenshots/My_catalog-books-menu.png)
+![Books Demo](./screenshots/My_catalog-books-demo.png)
+
+### Music menu
+
+![Music Menu](./screenshots/My_catalog-music-menu.png)
+![Music Demo](./screenshots/My_catalog-music-demo.png)
+
+Enjoy it!
 
 ## 🧩 Built With
 
@@ -15,9 +33,9 @@
 
 1. Clone the project using git-bash or Githup Desktop.
 2. Open the project folder with VSCode or any Editor.
-3. Open terminal and navigate to the project folder.
-4. Type `irb`.
-5. Copy the code from files and run it.
+3. In the project folder run `bundle install` on the terminal
+4. To run the test run `rspec spec` on the terminal
+5. To execute the program run `ruby main.rb`
 
 ## Authors
 
@@ -26,6 +44,12 @@
 - GitHub: [@williamrolando88](https://github.com/williamrolando88)
 - Twitter: [@WillyMorales93](https://twitter.com/WillyMorales93)
 - LinkedIn: [William Morales](https://www.linkedin.com/in/william-rolando-morales/)
+
+👤 **Yigit Mersin**
+
+- GitHub: [@github](https://github.com/ygtmrsn)
+- LinkedIn: [@linkedIn](linkedin.com/in/yigitmersin)
+- Twitter: [@twitter](https://twitter.com/ygtmrsn)
 
 ## 🤝 Contributing
 
@@ -37,19 +61,11 @@ Feel free to check the [issues page](../../issues).
 
 Give a ⭐️ if you like this project!
 
-<!-- ## 👍 Credits -->
-
-<!--
-GUI & Graphic Design: Cindy Shin
-
-- Behance: [Cindy Shin](https://www.behance.net/adagio07)
--->
-
 ## 📝 License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2022 William Morales
+Copyright (c) 2022 Yigit Mersin, William Morales
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
