@@ -76,6 +76,7 @@ def main
       @books_menu.call
     when '2'
       puts 'Listing all labels... (the proper method needs to be called here)'
+      @app.restore_data
       @app.list_labels
       continue
       @books_menu.call

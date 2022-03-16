@@ -16,7 +16,7 @@ class Labels
 
   def create_label(title, color)
     new_label = Label.new(title: title, color: color)
-    @labels << new_label 
+    @labels << new_label
     new_label
   end
 

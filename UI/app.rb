@@ -47,4 +47,8 @@ class App
     save_label(@labels) unless @labels.labels.empty?
     save_book(@books) unless @books.books.empty?
   end
+
+  def restore_data
+    parse_label(File.read(LABELS_FILE_PATH)) if File.exist?(LABELS_FILE_PATH)
+  end
 end

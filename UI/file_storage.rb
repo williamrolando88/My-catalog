@@ -15,6 +15,14 @@ module FileStorage
     books_json = books.convert_to_json
     File.write(BOOKS_FILE_PATH, JSON.pretty_generate(books_json))
   end
+
+  def parse_label(label_json)
+    return if label_json.empty?
+    
+    JSON.parse(label_json).each do |label|
+      @labels.create_label(label['title'], label['color'] )
+    end
+  end
 end
 
 
