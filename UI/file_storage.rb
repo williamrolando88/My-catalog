@@ -18,11 +18,10 @@ module FileStorage
 
   def parse_label(labels_json)
     return if labels_json.empty?
-    
+
     JSON.parse(labels_json).each do |label|
       @labels.restore_label_with_id(label['id'], label['title'], label['color'])
     end
-    
   end
 
   def parse_book(books_json)

@@ -13,43 +13,41 @@ module Helpers
 
   def request_title
     puts 'Label title:'
-    title = gets.chomp
-    title
+    gets.chomp
   end
 
   def request_color
     puts 'Label color:'
-    color = gets.chomp
-    color
+    gets.chomp
   end
 
   def request_genre
-      puts 'Genre:'
-      genre = gets.chomp
+    puts 'Genre:'
+    gets.chomp
   end
 
   def request_author
     puts 'Author:'
-    author = gets.chomp
+    gets.chomp
   end
 
   def request_source
     puts 'Source:'
-    source = gets.chomp
+    gets.chomp
   end
 
   def request_date
     puts 'Date(YYYY-MM-DD):'
-      date = gets.chomp
+    gets.chomp
   end
-      
+
   def request_publish
     puts 'Publisher:'
-    publish = gets.chomp
+    gets.chomp
   end
 
   def request_cover
     puts 'Cover State:'
-    cover = gets.chomp
+    gets.chomp
   end
 end

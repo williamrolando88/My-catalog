@@ -20,8 +20,7 @@ class App
   def add_label
     title = request_title
     color = request_color
-    label = @labels.create_label(title,color)
-    label
+    @labels.create_label(title, color)
   end
 
   def add_book
@@ -32,7 +31,7 @@ class App
     publish_date = request_date
     publisher = request_publish
     cover_state = request_cover
-    book = @books.add_book(genre,author,source, label, publish_date, publisher, cover_state)
+    @books.add_book(genre, author, source, label, publish_date, publisher, cover_state)
   end
 
   def list_books

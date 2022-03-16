@@ -3,8 +3,8 @@ require_relative '../classes/label'
 
 describe 'Item class' do
   before :each do
-    @label = Label.new(title: 'gift', color:'red')
-    @item = Item.new(genre: 'genre', author: 'author', source: 'source', label: @label, publish_date:'2022-03-04')
+    @label = Label.new(title: 'gift', color: 'red')
+    @item = Item.new(genre: 'genre', author: 'author', source: 'source', label: @label, publish_date: '2022-03-04')
   end
 
   it 'object class should be Item' do
