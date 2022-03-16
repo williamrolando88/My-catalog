@@ -1,9 +1,8 @@
-require_relative '../classes/book'
 require_relative '../classes/label'
 
 class Labels
 
-  attr_accessor :label
+  attr_accessor :labels
 
   def initialize
     @labels = []
@@ -19,5 +18,9 @@ class Labels
     new_label = Label.new(title: title, color: color)
     @labels << new_label 
     new_label
+  end
+
+  def convert_to_json
+    @labels.map(&:to_hash)
   end
 end

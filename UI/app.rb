@@ -3,9 +3,11 @@ require_relative '../classes/label'
 require_relative 'books'
 require_relative 'labels'
 require_relative 'helpers'
+require_relative 'file_storage'
 
 class App
   include Helpers
+  include FileStorage
 
   attr_accessor :book, :labels, :books
 
@@ -39,5 +41,10 @@ class App
 
   def list_labels
     @labels.list_labels
+  end
+
+  def save_data
+    save_label(@labels) unless @labels.labels.empty?
+    save_book(@books) unless @books.books.empty?
   end
 end

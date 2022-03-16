@@ -40,6 +40,7 @@ def main
       @music_menu.call
     when 'E'
       clear_screen
+      @app.save_data
       puts 'Have a nice day ;D'
       gets
       clear_screen
