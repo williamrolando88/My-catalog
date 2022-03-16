@@ -36,13 +36,12 @@ class App
   end
 
   def list_books
-    restore_labels
-    restore_books
+    restore_data if @books.books.length.zero?
     @books.list_books
   end
 
   def list_labels
-    restore_labels if @labels.labels.length.zero?
+    restore_data if @labels.labels.length.zero?
     @labels.list_labels
   end
 
@@ -51,11 +50,8 @@ class App
     save_book(@books) unless @books.books.empty?
   end
 
-  def restore_labels
+  def restore_data
     parse_label(File.read(LABELS_FILE_PATH)) if File.exist?(LABELS_FILE_PATH)
-  end
-
-  def restore_books
     parse_book(File.read(BOOKS_FILE_PATH)) if File.exist?(BOOKS_FILE_PATH)
   end
 end
