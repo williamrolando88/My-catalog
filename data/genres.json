@@ -1,0 +1,17 @@
+[
+  {
+    "type": "Genre",
+    "id": 234,
+    "name": "Rock"
+  },
+  {
+    "type": "Genre",
+    "id": 712,
+    "name": "Pop"
+  },
+  {
+    "type": "Genre",
+    "id": 480,
+    "name": "Pasillo"
+  }
+]

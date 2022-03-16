@@ -7,17 +7,24 @@ AllCops:
 
   DisplayCopNames: true
 
+Metrics/ParameterLists:
+  Max: 7
 Layout/LineLength:
-  Max: 120
+  Enabled: false
 Metrics/MethodLength:
-  Max: 20
+  Enabled: false
 Metrics/AbcSize:
-  Max: 50
+  Enabled: false
 Metrics/ClassLength:
-  Max: 150
+  Enabled: false
 Metrics/BlockLength:
+  Enabled: false
   IgnoredMethods: ['describe']
   Max: 30
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/ParameterLists:
+  Max: 7
 
 Style/Documentation:
   Enabled: false

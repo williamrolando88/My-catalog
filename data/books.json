@@ -1,0 +1,24 @@
+[
+  {
+    "type": "Book",
+    "id": 420,
+    "genre": "History",
+    "author": "Harrari",
+    "source": "Buy",
+    "label": 828,
+    "publish_date": "2020-01-01",
+    "publisher": "Penguin",
+    "cover_state": "Good"
+  },
+  {
+    "type": "Book",
+    "id": 468,
+    "genre": "Fiction",
+    "author": "Ayn Rand",
+    "source": "Buy",
+    "label": 828,
+    "publish_date": "2005-01-01",
+    "publisher": "Global",
+    "cover_state": "Bad"
+  }
+]
