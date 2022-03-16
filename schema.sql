@@ -30,5 +30,21 @@ CREATE TABLE label(
   PRIMARY KEY(id)
 );
 
+CREATE TABLE genre(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(250),
+  PRIMARY KEY(id)
+);
 
-
+CREATE TABLE music_album(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  genre VARCHAR(250),
+  author VARCHAR(250),
+  source VARCHAR(250),
+  label VARCHAR(250),
+  on_spotify BOOLEAN,
+  publish_date DATE,
+  genre_id INT,
+  FOREIGN KEY(genre_id) REFERENCES genre(id) ON DELETE CASCADE,
+  PRIMARY KEY(id)
+);
